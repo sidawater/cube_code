@@ -17,11 +17,12 @@ class SignificantValue(models.Model):
         ('Internet', '网络用语'),
         ('dialect', '方言俗语'),
         ('personal', '个人专用'),
+        ('others', '其他')
     )
 
     key = models.ForeignKey(MemoryMapKey)
     content = models.CharField(verbose_name='联想词汇', max_length=128)
-    remark = models.CharField(verbose_name='描述', max_length=512)
+    remark = models.CharField(verbose_name='描述', max_length=512, default='')
     related_type = models.CharField(verbose_name='联想类型', max_length=30,
                                     choices=RELATED_TYPE_CHOICE, default='acronym')
     images = models.CharField(max_length=512, null=True, blank=True)

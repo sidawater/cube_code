@@ -1,9 +1,8 @@
 import xlrd
 
 def get_initial_dat():
-    data = xlrd.open_workbook('fixture.xlsx')
+    data = xlrd.open_workbook('fixture/fixture.xlsx')
     table = data.sheets()[0]
-
 
     collect = {}
     key = ''
@@ -20,3 +19,5 @@ def get_initial_dat():
                 collect[key].extend(table.row_values(i))
 
     return collect
+
+get_initial_dat()
