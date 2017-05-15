@@ -6,4 +6,4 @@ def codemap_view(request):
     context = {
         'base_dir': BASE_DIR
     }
-    return render(request, 'codemap/base.html', context)
+    return render(request, 'codemap/index.html', context)

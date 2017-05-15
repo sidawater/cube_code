@@ -1,16 +1,17 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
+import ElementUI from 'element-ui'
 import router from './router'
-// import App from './App'
-import Test from './components/codemap/index'
+import TestCom from './components/codemap/index'
+import 'element-ui/lib/theme-default/index.css'
 
-Vue.config.productionTip = false
+Vue.use(ElementUI)
+// Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el: '#codemap',
   router,
-  // template: '<App/>',
-  components: { Test }
+  components: { TestCom }
 })

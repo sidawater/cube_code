@@ -1,0 +1,18 @@
+{% load template_tags %}
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>多盲高盲编码表</title>
+    {% csrf_token %}
+</head>
+<body>
+    <div class="">
+        <div id="codemap">
+            <test-com></test-com>
+        </div>
+    </div>
+    {% webpack 'app.js' %}
+</body>
+</html>
