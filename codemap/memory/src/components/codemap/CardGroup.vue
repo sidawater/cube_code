@@ -16,11 +16,16 @@
 </template>
 
 <script>
+import axios from 'axios'
+
 export default {
   name: 'card-group',
   methods: {
     make_cards () {
       console.log('a')
+    },
+    get_data () {
+      axios.get()
     }
   },
   data () {
