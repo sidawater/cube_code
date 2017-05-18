@@ -23,7 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'tuptw_*=p86#d*wq5g83#fryb+j%%wz-#*&$wjungeajg_vrf@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+from . import debug
+DEBUG = debug.DEBUG
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
@@ -139,9 +140,7 @@ STATICFILES_FINDERS = (
     'compressor.finders.CompressorFinder',
 )
 
-# STATICFILES_DIRS = [
-#     # os.path.join(BASE_DIR, 'static'),
-#     os.path.join(BASE_DIR, 'mysite/my-project/dist'),
-#     os.path.join(BASE_DIR, 'codemap', 'memory/dist'),
-#     os.path.join(BASE_DIR, "staticfiles"),
-# ]
+# find a way to auto add staticfiles_dirs
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'codemap/memory/dist'),
+]

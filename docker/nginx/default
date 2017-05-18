@@ -13,9 +13,14 @@
 
 # Default server configuration
 #
+# upstream django {
+#     # server unix:///path/to/your/mysite/mysite.sock; # for a file socket
+#     server 127.0.0.1:8000; # for a web port socket (we'll use this first)
+# }
+
 server {
 	listen 80;
-	server_name     www.cubeplayer.com;
+	server_name     www.cubeplayer.com localhost 127.0.0.1;
 	charset     utf-8;
 
 	# SSL configuration
@@ -34,8 +39,6 @@ server {
 	#
 	# include snippets/snakeoil.conf;
 
-	root /home/sidawater/project/cube_code;
-
 	# Add index.php to the list if you are using PHP
 	index templates/codemap/base.html;
 
@@ -44,9 +47,23 @@ server {
 	location / {
 		# First attempt to serve request as file, then
 		# as directory, then fall back to displaying a 404.
-		proxy_pass http://127.0.0.1:8000;
+		# proxy_pass http://127.0.0.1:8000;
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_set_header Host $http_host;
+		proxy_redirect off;
+	 
+		if (!-f $request_filename) {
+		    proxy_pass http://127.0.0.1:8000;
+		    break;
+		}
+	}
+
+	location /static/ {
+		alias /home/sidawater/project/cube_code/static/static/;
+		access_log  off;
 	}
 	
+	# development environment vue static server
 	location ^~ /__webpack_hmr/ {
 		rewrite ^/(__webpack_hmr)/(.*) /$2 break;
 		proxy_pass http://127.0.0.1:8080;
