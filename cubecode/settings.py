@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
+    '119.23.255.245',
     'www.cubeplayer.com',
     'cube.sidawater.com',
 ]
