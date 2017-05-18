@@ -3,9 +3,10 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <title>多盲高盲编码表</title>
-    {% csrf_token %}
+  <meta charset="UTF-8">
+  <title>多盲高盲编码表</title>
+  {% csrf_token %}
+
 </head>
 <body>
     <div class="">
@@ -13,6 +14,16 @@
             <test-com></test-com>
         </div>
     </div>
-    {% webpack 'app.js' %}
+    <link href=/m_static/css/app.d55f4b5bb41619985d101eb0665e6e2c.css rel=stylesheet>
+    <link href=/m_static/css/nextcom.2e94aa3c0a30ea1fadbc66ac3f0874d9.css rel=stylesheet>
+    <script type=text/javascript src=/m_static/js/manifest.d8afd52cd64d873cc2ff.js></script>
+    <script type=text/javascript src=/m_static/js/vendor.0c9d91d1048fc33a4bf4.js></script>
+    <script type=text/javascript src=/m_static/js/app.04e3b08c7e5f1cb72df0.js></script>
+    <script type=text/javascript src=/m_static/js/nextcom.e47ceb974add0cbb5b59.js></script>
+    <!-- {% webpack 'app' 'true' %}
+    <div id="next_com">
+
+    </div>
+    {% webpack 'nextcom' 'true' %} -->
 </body>
 </html>

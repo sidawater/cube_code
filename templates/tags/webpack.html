@@ -1,1 +1,6 @@
-<script type="text/javascript" src="/__webpack_hmr/{{ js_file_name }}"></script>
+{% if debug %}
+  <script type="text/javascript" src="/__webpack_hmr/{{ js_file_name }}.js"></script>
+{% else %}
+  <link type="text/javascript" src="/m_static/index.html">
+
+{% endif %}

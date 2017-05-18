@@ -1,0 +1,2 @@
+webpackJsonp([2],{6:function(e,t,a){"use strict";var n=a(2),u=a(33);n.default.use(u.a),t.a=new u.a({routes:[{path:"/",name:"Hello"}]})},7:function(e,t){},77:function(e,t,a){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=a(2),u=a(10),o=a.n(u),r=a(6),s=a(7);a.n(s);n.default.use(o.a),new n.default({el:"#next_com",router:r.a})}},[77]);
+//# sourceMappingURL=nextcom.e47ceb974add0cbb5b59.js.map
