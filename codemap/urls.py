@@ -6,6 +6,6 @@ from .api import v1_api as codemap_api
 
 
 urlpatterns = [
-    url(r'^', views.codemap_view),
+    url(r'^$', views.codemap_view),
     url(r'^api/', include(codemap_api.urls)),
 ]
