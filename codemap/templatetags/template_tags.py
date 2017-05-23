@@ -24,5 +24,4 @@ def webpack(context, static_file_name):
         'css_list': css_list,
         'static_file_name': static_file_name,
     }
-    print(all_js_list)
     return context

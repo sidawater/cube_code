@@ -1,0 +1,11 @@
+{
+  "name": "devscripts",
+  "version": "1.0.0",
+  "description": "just a scripts",
+  "author": "sidawater <sidawater@gmail.com>",
+  "private": true,
+  "scripts": {
+    "pkonline": "cd timer/pkonline && npm run dev",
+    "codemap": "cd codemap/memory && npm run dev"
+  }
+}

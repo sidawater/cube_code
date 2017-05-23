@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'', )
     url(r'^codemap/', include('codemap.urls')),
+    url(r'^timer/', include('timer.urls')),
     # url(r'^api/', include(codemap_api.urls)),
 ]

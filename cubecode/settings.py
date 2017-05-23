@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'tastypie',
     'cubecode',
     'codemap',
+    'timer',
 ]
 
 MIDDLEWARE = [
@@ -143,4 +144,5 @@ STATICFILES_FINDERS = (
 # find a way to auto add staticfiles_dirs
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'codemap/memory/dist'),
+    os.path.join(BASE_DIR, 'timer/pkonline/dist'),
 ]

@@ -1,0 +1,16 @@
+{% load template_tags %}
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>在线pk</title>
+    {% csrf_token %}
+</head>
+<body>
+    <div id="pktimer">
+        <pk-timer></pk-timer> 
+    </div>
+    {% webpack 'timer_pktimer' %}
+</body>
+</html>
